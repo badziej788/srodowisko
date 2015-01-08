@@ -1,0 +1,13 @@
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+	int a;
+	printf("podaj lancuch znakow\n");
+    char str[20];
+	scanf("%20s", str);
+
+printf("dlugosc tego napisu to : %d\n", strlen(str));
+     return 0;
+}
