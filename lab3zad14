@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(int argc, char** argv)
+{
+int i=0;
+int TAB[20];
+//int d=0;
+TAB[0]=2;
+TAB[1]=1;
+
+for (i = 2; i < 20; ++i)
+{
+	TAB[i]=TAB[i-2]+TAB[i-1];
+
+}
+for (i = 0; i < 20; ++i)
+{ 	
+	printf("TAB[%d] = %d\n", i, TAB[i]);
+	if(i==19)
+	{
+	printf("ostatnia liczba ciagu LUCAS to %d\n", TAB[i]);
+	}
+	
+}
+
+return 0;
+}
