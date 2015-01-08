@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main(int argc, char** argv)
+{
+int a,nr;
+printf("podaj numer miesiaca\n");
+scanf("%d", &nr);
+enum Pora_roku{WIOSNA,LATO,JESIEN,ZIMA};
+switch(nr) {
+case 3:
+case 4:
+case 5:
+a=0;
+break;
+case 6:
+case 7:
+case 8:
+a=1;
+break;
+case 9:
+case 10:
+case 11:
+a=2;
+break;
+case 12:
+case 1:
+case 2:
+a=3;
+break;
+default: 
+printf("Numer miesiaca jest liczba z przedzialu 1..12!\n");
+
+}
+
+
+
+if (a == ZIMA)
+{
+printf("ZIMA ZIMA ZIMA!!!!\n");
+}
+else if (a == WIOSNA)
+{
+printf("wiosna\n");
+}
+else if (a == LATO)
+{
+printf("lato\n");
+}
+else if (a == JESIEN)
+{
+printf("jesien\n");
+}
+
+return 0;
+}
