@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void pobrana_liczba(int b);
+
+int main()
+{
+	int liczba;
+	printf("Podaj liczbe: ");
+	pobrana_liczba(&liczba);
+	printf("liczba to %d \n", liczba);
+
+	return 0;
+}
+
+void pobrana_liczba(int b)
+{
+	scanf("%d", b);	
+}
