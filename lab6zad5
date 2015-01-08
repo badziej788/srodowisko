@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int * ZnajdzJeden(int *poczatek, int *koniec);
+
+int main()
+{
+	int tab[10] = {6, 5, 2, 8, 3, 0, 5, 9, 1, 9};
+	int *jeden = ZnajdzJeden(&tab[0], &tab[9]);
+	if (jeden)
+		printf("jedynka jest pod adresem %p \n", jeden);
+	else
+		printf("nie ma jedynki\n");
+
+	return 0;
+}
+
+int * ZnajdzJeden(int *poczatek, int *koniec)
+{
+	int i;
+
+	for(i=0; &poczatek[i] <= koniec; i++) {
+		if(poczatek[i] == 1) {
+			return &poczatek[i];
+		}
+	}
+
+	return NULL;
+}
