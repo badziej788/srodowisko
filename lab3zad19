@@ -1,0 +1,34 @@
+#include <stdio.h>
+int star(int NN);
+int main()
+{
+int N;
+int a=N;
+printf("wprowadz max liczbe gwiazdek: ");		
+scanf("%d",&N);
+
+//===================================================================== STEROWANIE
+for(a=0;a<N;a++)				//===================== gora
+{
+star(a);	
+printf("\n");	
+}
+for (N;N>0;N--){   //=========================================== dol 
+star(N);	
+printf("\n");	
+}
+return 0;
+}
+
+//===================================================================================================
+int star(int NN)	
+{
+
+int i;	
+
+for (i=1; i<=NN;i++)
+{
+printf("*");
+}
+return 0;
+} 
