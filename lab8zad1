@@ -1,0 +1,46 @@
+/*	Napisz program, ktory:
+
+a) tworzy plik o nazwie losowe.txt, generuje 10 liczb całkowitych 
+pseudolosowych z zakresu 1-100, ktore wyswietla na ekranie i zapisuje
+do pliku losowe.txt, */
+
+#include <stdio.h>
+
+int main(int argc, char **argv)
+
+{	FILE *f = NULL;						
+			
+	f = fopen("losowe.txt","w");		
+    int i, zarodek, a; 
+    
+    zarodek = time(NULL);
+    srand(zarodek);   // za zarodek wstawiamy pobrany czas w sekundach
+    
+     
+    for(i= 1; i<= 10; ++i){
+		a=rand()%100;
+    printf(" %d  Liczba pseudolosowa z przedziału <0, 99> to %d\n",i, a);
+    fprintf(f,"%d \t",a);    
+	}
+	fclose(f);
+	
+	printf("\n odczytywanie z pliku!!\n" );
+	puts("\n");
+	
+		FILE*g = fopen("losowe.txt", "r");
+	if (g)
+	{
+	char znak;
+	
+	
+	
+	while ((znak = fgetc(g)) !=EOF )
+	{
+		printf("%c" ,znak);
+	}
+	
+	fclose(g);
+  
+	return 0;
+}
+}
