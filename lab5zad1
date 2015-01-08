@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{	int x,y,z, a,b;
+	const float PI = 3.1415926535;
+	const char Przedmiot[] = "programowanie";
+	unsigned int Rok = -1;
+	printf("%u\n", Rok);
+	x= sizeof(char);
+	y=sizeof(short);
+	z= sizeof(int);
+	a=sizeof(long);
+	b=sizeof(long long);
+	printf("rozmiar chara :%d\n rozmiar shorta: %d\n rozmiar inta: %d\n rozmiar longa: %d\n", x,y,z,a);
+	printf("rozmiar long long to : %d\n",b);
+	return 0;
+}
