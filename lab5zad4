@@ -1,0 +1,31 @@
+#include <stdio.h>
+ main(int argc, char** argv)
+{
+struct kolo
+{
+int x;
+int y;
+int r;
+}; 
+
+/* definicja */
+struct kolo K1;
+K1.x = 1;
+K1.y = 5;
+K1.r = 2;
+struct kolo K2;
+K2.x = 4;
+K2.y = 3;
+K2.r = 1;
+// K1 = (1, 5, 2), K2 = (4, 3, 1);
+printf("K1 = ( %d , %d, %d)\n ", K1.x,K1.y,K1.r);
+printf("K2 = ( %d , %d, %d)\n ", K2.x,K2.y,K2.r);
+
+K1.x = 0;
+K1.y = 0;
+K2.r = 10;
+printf("K1 = ( %d , %d, %d)\n ", K1.x,K1.y,K1.r);
+printf("K2 = ( %d , %d, %d)\n ", K2.x,K2.y,K2.r);
+
+return 0;
+}
