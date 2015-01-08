@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main(int argc, char** argv)
+{
+	char imie [10];
+	puts("jak masz na imie?");
+	scanf("%9s", imie);
+	printf("czesc %s!\n", imie);
+	
+	return 0;
+}
