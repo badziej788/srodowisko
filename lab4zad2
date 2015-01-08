@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+int main(int argc, char** argv)
+{ int i,t;
+char znaki [20];
+
+puts("wprowadz znaki");
+char s= scanf("%20s", znaki);
+t = (int)strlen(znaki);
+printf("Znaki: ");
+
+
+for (i=0; i<t-1; i++)
+{ 
+s= printf("%c*",znaki[i]);
+
+
+} 
+printf("%c", znaki[t-1]);
+return 0;
+}
