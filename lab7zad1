@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct Kolo
+{
+	int x;
+	int y;
+	float r;
+};
+
+void Zwieksz(struct Kolo * wsk_kolo);
+
+int main()
+{
+	struct Kolo kol = {1, 2, 3.0};
+	Zwieksz(&kol);
+	printf("Skladowe po zwiekszeniu: %d %d %f \n", kol.x, kol.y, kol.r);
+		
+	return 0;
+}
+
+void Zwieksz(struct Kolo * wsk_kolo)
+{
+	if(!wsk_kolo)
+		return;
+	wsk_kolo -> x++;
+	wsk_kolo -> y++;
+	wsk_kolo -> r++;
+}
